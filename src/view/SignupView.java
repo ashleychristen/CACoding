@@ -6,6 +6,8 @@ import interface_adapter.clear_users.ClearViewModel;
 import interface_adapter.signup.SignupController;
 import interface_adapter.signup.SignupState;
 import interface_adapter.signup.SignupViewModel;
+import use_case.clear_users.ClearOutputData;
+import use_case.clear_users.ClearUserDataAccessInterface;
 
 import javax.swing.*;
 import java.awt.*;
@@ -95,8 +97,8 @@ public class SignupView extends JPanel implements ActionListener, PropertyChange
                         if (e.getSource().equals(clear)){
                            ClearState currentState = clearViewModel.getState();
                            clearController.execute();
+                           usersCleared();
                         }
-
                     }
                 }
         );
@@ -192,12 +194,12 @@ public class SignupView extends JPanel implements ActionListener, PropertyChange
         }
     }
 
-    public void usersCleared(PropertyChangeEvent e) {
-        ClearState state = (ClearState) e.getNewValue();
+    public void usersCleared() {
+
         String usersString = "";
-        List<String> users = state.getUsers();
+        List<String> users = clearViewModel.getUsers();
         for (int i = 0; i < users.size(); i++) {
-            usersString = usersString + users.get(i);
+            usersString = usersString + "\n" + users.get(i);
         }
         JOptionPane.showMessageDialog(this, usersString);
     }
