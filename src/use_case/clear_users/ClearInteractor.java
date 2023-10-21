@@ -2,7 +2,7 @@ package use_case.clear_users;
 import entity.User;
 import entity.UserFactory;
 import java.util.List;
-// TODO Complete me
+//  Complete me
 
 
 public class ClearInteractor implements ClearInputBoundary {

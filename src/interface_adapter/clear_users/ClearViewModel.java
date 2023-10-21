@@ -5,7 +5,7 @@ import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.util.List;
 
-// TODO Complete me
+//  Complete me
 // DONE
 
 public class ClearViewModel extends ViewModel{

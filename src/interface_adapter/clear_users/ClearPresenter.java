@@ -1,6 +1,6 @@
 package interface_adapter.clear_users;
 
-// TODO Complete me
+//  Complete me
 // import interface_adapter.clear_users.ClearViewModel;
 
 import interface_adapter.login.LoginState;
